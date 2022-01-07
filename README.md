@@ -9,8 +9,8 @@ The Arousal and Valence tasks are provided in a classification format under thre
 ### 1.2 Available features
 Three types of npy files are provided for each audio file:
 1. Mel-spectrograms
-2. a sequence of 68 segment features calculated by [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis)
-3. a sequence of segment statistics (136 features) calculated by [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis)
+2. a sequence of 68 segment feature vectors calculated by [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis), using a 50 msec non overlapping window. In other words, each utterance is represented by a number_of_frames x 68 short-term features. 
+3. a sequence of segment statistics (i.e. the mean and std of the 68 short-term fetures, that is a 136-D feature vector for the whole utterance) calculated by [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis). 
 
 ## 2 Filenames
 Every feature filename is in the form of \<id1>_speaker\<id2>-\<id3>.npy where:
