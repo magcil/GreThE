@@ -1,4 +1,4 @@
-# theater_emotion_greek
+# GreThE
 A Dataset for Speech Emotion Recognition in Greek Theatrical Plays
 
 ## 1 Dataset format
