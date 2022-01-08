@@ -24,6 +24,14 @@ In order to perform the same feature extraction procedure on new raw audio files
 
 Note that the raw audio files must be mono and have a sampling rate of 8K. 
 
-## 4 Cite
+## 4 Basic Evaluation
+The evaluation.py srcipt is provided in order to perform a basic session-independent evaluation using feature statistics and [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis). <br/>
+For arousal, run: <br/>
+```python3 evaluation.py -p data/arousal/pyaudio/segment_stats/weak data/arousal/pyaudio/segment_stats/neutral data/arousal/pyaudio/segment_stats/strong```
+<br/>
+For valence, run: <br/>
+```python3 evaluation.py -p data/valence/pyaudio/segment_stats/negative data/valence/pyaudio/segment_stats/neutral data/valence/pyaudio/segment_stats/positive```
+
+## 5 Cite
 
 To be filled
