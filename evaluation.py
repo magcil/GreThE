@@ -18,7 +18,6 @@ def make_group_list(filenames):
     id = 1
     for f in filenames:
         show_id = f.split('/')[-1].split('_')[0]
-        print(show_id)
         found = False
         for count, gr in enumerate(groups_id):
             if show_id == groups_name[count]:
@@ -131,11 +130,12 @@ def extract_features_and_train(
                 print("NaN Found! Feature vector not used for training")
         temp_features.append(np.array(temp))
     features = temp_features
-
+    
+    n_exp = int(50000 / len(list_of_ids)) + 1
     best_param = att.evaluate_classifier(
         features, class_names, classifier_type,
         classifier_par, parameter_mode=0,
-        list_of_ids=list_of_ids, n_exp=-1,
+        list_of_ids=list_of_ids, n_exp=n_exp,
         train_percentage=train_percentage)
 
     print("Selected params: {0:.5f}".format(best_param))
