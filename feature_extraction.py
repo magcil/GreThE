@@ -74,10 +74,10 @@ def pyaudio_segment_features(filenames):
 
     sequences, sampling_rate = pyaudio_read(filenames)
 
-    mid_window = 1
+    mid_window = 3
     mid_step = 1
     short_window = 0.05
-    short_step = 0.01
+    short_step = 0.05
 
     for seq in tqdm(sequences):
         (segment_features_stats, segment_features,
