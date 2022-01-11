@@ -6,10 +6,10 @@ A Dataset for Speech Emotion Recognition in Greek Theatrical Plays
 | --- | --- |
 | # samples  | 500  |
 | Total duration  | 46 mins  |
-| Classification tasks annotated  | 2 (valence and arousal)  |
-| Number of human annotators  | 4  |
-| Number of theatrical plays used | 23  |
-| Number of unique speakers | 90  |
+| # Classification tasks  | 2 (valence and arousal)  |
+| # human annotators  | 4  |
+| # theatrical plays used | 23  |
+| # unique speakers | 90  |
 | Language | Greek  |
 
 ## 2 Dataset format
