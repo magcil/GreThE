@@ -37,6 +37,12 @@ Note that the raw audio files must be mono and have a sampling rate of 8K.
 
 ## 4. Basic Evaluation
 The `evaluation.py` srcipt is provided in order to perform a basic session-independent evaluation using feature statistics and [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis).
+
+First install dependencies by: 
+```
+pip3 install -r requirements.txt
+```
+
 For arousal, run: 
 ```
 python3 evaluation.py -p data/arousal/pyaudio/segment_stats/weak data/arousal/pyaudio/segment_stats/neutral data/arousal/pyaudio/segment_stats/strong
