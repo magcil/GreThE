@@ -89,12 +89,32 @@ if __name__ == '__main__':
             valence_preds.append(probs_va[i][classes_vals_va[classes_names_va.index("positive")]] - probs_va[i][classes_vals_va[classes_names_va.index("negative")]])
 #    import pdb; pdb.set_trace()
     import pandas as pd
+    valence_preds.append(-0.95)
+    valence_preds.append(-.95)
+    valence_preds.append(.95)
+    valence_preds.append(.95)
+    arousal_preds.append(-.95)
+    arousal_preds.append(.95)
+    arousal_preds.append(-.95)
+    arousal_preds.append(.95)
+
     v = pd.Series(valence_preds)
     aa = pd.Series(arousal_preds)
-    df = pd.DataFrame({'v': v, 'a': aa})
+    df = pd.DataFrame({'valence': v, 'arousal': aa})
     
     import plotly.express as px
-    fig = px.density_heatmap(df, x="v", y="a")
+    fig = px.density_heatmap(df, x="valence", y="arousal", nbinsx=10, nbinsy=10)
+
+    ff=dict(family="Courier New, monospace",
+            size=22,
+            color="#eeffff")
+
+    fig.add_annotation(text="happiness", x=0.3, y=0.5, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")    
+    fig.add_annotation(text="calmness", x=0.3, y=-0.5, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")    
+    fig.add_annotation(text="sadness", x=-0.3, y=-0.5, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")    
+    fig.add_annotation(text="fear", x=-0.5, y=0.2, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")    
+    fig.add_annotation(text="anger", x=-0.3, y=0.5, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")
+    fig.add_annotation(text="excitement", x=0.1, y=0.6, arrowhead=1, showarrow=True, font=ff, arrowwidth=2, arrowcolor="#eeffff")
     fig.show()
 #    import matplotlib.pyplot as plt
 #    plt.plot(valence_preds, arousal_preds, '*r')
