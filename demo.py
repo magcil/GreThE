@@ -33,9 +33,9 @@ if __name__ == '__main__':
     FLAGS = parser.parse_args()
 
     input = FLAGS.input
-    arousal = "merged_3sec_arousal_transfered_fin.pt"
-    valence = "merged_3sec_valence_transfered_fin.pt"
-    general = "4_class.pt"
+    arousal = "models/merged_3sec_arousal_transfered_fin.pt"
+    valence = "models/merged_3sec_valence_transfered_fin.pt"
+    general = "models/4_class.pt"
 
     arousal_preds = []
     valence_preds = []
